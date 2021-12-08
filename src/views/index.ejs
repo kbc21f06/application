@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <title>西条だんじり録</title>
+</head>
+<body>
+    <header>
+        <h1>西条だんじり録</h1>
+        <nav>
+            <ul>
+                <li><a href="search.html">検索</a></li>
+                <li><a href="add.html">追加</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <main>
+            <table>
+                <tr>
+                    <th>No.</th>
+                    <th>屋台名</th>
+                    <th>読み方</th>
+                    <th>制作年</th>
+                    <th>大工</th>
+                    <th>彫刻師</th>
+                    <th>奉納神社</th>
+                    <th></th>
+                </tr>
+                <% for (var item of ary) { %>
+                    <tr>
+                        <td>
+                            <%= item.id %>
+                        </td>
+                        <td>
+                            <%= item.yataiName %>
+                        </td>
+                        <td>
+                            <%= item.yataiNameKana %>
+                        </td>
+                        <td>
+                            <%= item.production %>
+                        </td>
+                        <td>
+                            <%= item.carpenter %>
+                        </td>
+                        <td>
+                            <%= item.sculptor %>
+                        </td>
+                        <td>
+                            <%= item.shrine %>
+                        </td>
+                        <td><a href="edhit.html?id=<%= item.id %>">変更</a> <a href="del.html?id=<%= item.id %>">削除</a></td>
+                    </tr>
+                    <% } %>
+            </table>
+        </main>
+    </div>
+</body>
+</html>
