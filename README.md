@@ -21,4 +21,5 @@ TypeScriptでExpressフレームワークを使用するための最低限のセ
 npx ts-node src/app.ts
 ```
 
+http://localhost:3000/
 
