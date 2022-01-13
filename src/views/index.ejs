@@ -10,8 +10,9 @@
         <h1>西条だんじり録</h1>
         <nav>
             <ul>
+                <li><a href="./">一覧</a></li>
                 <li><a href="search.html">検索</a></li>
-                <li><a href="add.html">追加</a></li>
+                <li><a href="add">追加</a></li>
             </ul>
         </nav>
     </header>
@@ -24,7 +25,7 @@
                     <th>読み方</th>
                     <th>制作年</th>
                     <th>大工</th>
-                    <th>彫刻師</th>
+                    <th>彫刻</th>
                     <th>奉納神社</th>
                     <th></th>
                 </tr>
@@ -51,7 +52,7 @@
                         <td>
                             <%= item.shrine %>
                         </td>
-                        <td><a href="edhit.html?id=<%= item.id %>">変更</a> <a href="del.html?id=<%= item.id %>">削除</a></td>
+                        <td><a href="edit?id=<%= item.id %>">変更</a> <a href="del?id=<%= item.id %>">削除</a></td>
                     </tr>
                     <% } %>
             </table>

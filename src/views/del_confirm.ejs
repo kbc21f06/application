@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <title>西条だんじり録　削除</title>
+</head>
+
+<body>
+    <header>
+        <h1>西条だんじり録　削除</h1>
+        <nav>
+            <ul>
+                <li><a href="./">一覧</a></li>
+                <li><a href="search.html">検索</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <main>
+            <form action="" method="post">
+                <input id="id" name="id" type="hidden" value="<%= person.id %>">
+                <input id="token" name="token" type="hidden" value="<%= token %>">
+                屋台名：<%= person.yataiName %><br>
+                読み方：<%= person.yataiNameKana %><br>
+                制作年：<%= person.production %><br>
+                大工：<%= person.carpenter %>"<br>
+                彫刻：<%= person.sculptor %><br>
+                奉納神社：<%= person.shrine %><br>
+                このエントリを削除しますか？<br>
+                <p class="submit"><input type="submit" name="submit" value="削除"></p>
+            </form>
+
+        </main>
+    </div>
+</body>
+
+</html>

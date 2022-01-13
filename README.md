@@ -23,3 +23,8 @@ npx ts-node src/app.ts
 
 http://localhost:3000/
 
+mysql -u root
+
+source ddl/create_db.sql
+source ddl/ddl_addressbook.sql
+source ddl/testdata.sql
