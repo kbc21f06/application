@@ -53,7 +53,7 @@ export class yataiModel {
     private static async updateyatai(person: yatai): Promise<number> {
         let queryParam = {
             sql: "UPDATE address_entry SET yataiName = ?, yataiNameKana = ?, production = ?, carpenter = ?, "
-                         + "sculptor = ?, shrine = ?",
+                         + "sculptor = ?, shrine = ? WHERE id = ?",
             values: [person.yataiName, person.yataiNameKana, person.production, person.carpenter, person.sculptor,
                         person.sculptor, person.shrine, Number(person.id)]
         }
